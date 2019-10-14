@@ -23,7 +23,9 @@ export default function CharacterList() {
       {chars.map(person => {
         return (
           <CharacterCard
+          id={person.id}
           name={person.name}
+          url={person.image}
           />
         )
       })}
