@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import CharacterCard from "./CharacterCard";
 
 export default function CharacterList() {
   const [ chars, setChars] = useState([]);
@@ -12,7 +13,6 @@ export default function CharacterList() {
       console.log(charList);
       setChars(charList);
     })
-
     .catch (err => {
       console.log("Error", err);
     })
@@ -20,7 +20,13 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      {chars.map(person => {
+        return (
+          <CharacterCard
+          name={person.name}
+          />
+        )
+      })}
     </section>
   );
 }
