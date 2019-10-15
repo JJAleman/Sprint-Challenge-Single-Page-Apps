@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url('./components/rick-and-morty-wallpaper-portal-wallpaper-001.jpg');
 }
 
 main {
@@ -36,4 +37,11 @@ main {
 
 header h1 {
   text-align: center;
+}
+
+.character-list {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 20px 1rem;
 }
